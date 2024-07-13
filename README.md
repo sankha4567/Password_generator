@@ -1,1 +1,2 @@
 # Password_generator
+In the digital age, security is paramount. One of the fundamental aspects of securing data and online accounts is the use of strong, unpredictable passwords. The Password Generator project in Java aims to create a utility that generates random, secure passwords. This tool is essential for users who need to create new passwords that are difficult to guess or crack, enhancing their overall security.
