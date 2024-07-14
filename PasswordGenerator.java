@@ -1,5 +1,6 @@
-import java.security.SecureRandom;
 
+import java.util.*;
+import java.security.SecureRandom;
 public class PasswordGenerator {
 
     private static final String CHAR_LOWER = "abcdefghijklmnopqrstuvwxyz";
@@ -11,13 +12,15 @@ public class PasswordGenerator {
     private static SecureRandom random = new SecureRandom();
 
     public static void main(String[] args) {
-        int length = 12; // Password length
+        System.out.println("enter the length of the password");
+        Scanner sc=new Scanner(System.in);
+        int length = sc.nextInt(); // Password length
         System.out.println(generatePassword(length));
     }
 
     public static String generatePassword(int length) {
-        if (length < 8) {
-            throw new IllegalArgumentException("Password length must be at least 8 characters");
+        if (length < 8 || length > 16) {
+            throw new IllegalArgumentException("Password length must be at least 8 to 16 characters");
         }
 
         StringBuilder password = new StringBuilder(length);
